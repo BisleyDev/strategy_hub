@@ -1,0 +1,56 @@
+// This is your Prisma schema file,
+// learn more about it in the docs https//pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+
+model PositionModel {
+    id          String   @id
+    timeClose   DateTime?
+    timeOpen    DateTime
+    symbol      String
+    side        String
+    status      String
+    sizeQuote   Float
+    sizeBase    Float
+    priceOpen   Float
+    priceClose  Float?
+    fee         Float
+    feeAsset    String
+    profit      Float?
+    feeClose    Float?
+    profitPercent Float?
+    account     String
+    strategy    String
+}
+model OrderTakeStopModel {
+    id          String   @id
+    timeClose   DateTime?
+    timeOpen    DateTime
+    symbol      String
+    side        String
+    status      String
+    sizeQuote   Float
+    sizeBase    Float
+    priceOpen   Float
+    priceClose  Float?
+    fee         Float
+    feeAsset    String
+    profit      Float?
+    feeClose    Float?
+    profitPercent Float?
+    account     String
+    strategy    String
+    stopPrice   Float
+    takePrice   Float
+}
+
+
+

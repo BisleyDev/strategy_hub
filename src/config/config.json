@@ -1,0 +1,108 @@
+{
+  "Symbols": [
+    {
+      "symbol": "BTCUSDT",
+      "baseAsset": "BTC",
+      "quoteAsset": "USDT",
+      "valueBaseAsset": 0.1,
+      "valueQuoteAsset": 2700
+    }
+  ],
+  "env": "test",
+  "API_URLS": {
+    "BinanceBaseRest": "https://api.binance.com/api/",
+    "BinanceProdRest": "https://api2.binance.com/api/"
+  },
+  "MAX_BARS_LIMIT": 1000,
+  "pinBar": {
+    "interval": "1h",
+    "account": "margin isolate",
+    "MACD": {
+      "interval": "1h",
+      "fast": 12,
+      "slow": 26,
+      "signal": 9
+    }
+  },
+  "DiffVolume": {
+    "interval": "1d",
+    "account": "margin isolate",
+    "volume": {
+      "MA": 1
+    }
+  },
+  "lineStrike": {
+    "interval": "5m",
+    "account": "margin isolate",
+    "MACD": {
+      "interval": "1h",
+      "fast": 12,
+      "slow": 26,
+      "signal": 9
+    }
+  },
+  "CCI": {
+    "interval": "1h",
+    "account": "margin isolate",
+    "CCI": {
+      "interval": "1h",
+      "length": 300,
+      "upperBand": 200,
+      "lowerBand": -200
+    },
+    "SMA": {
+      "interval": "1h",
+      "length": 300
+    }
+  },
+  "RsiPeaks": {
+    "account": "margin",
+    "interval": "1h",
+    "stopLimit": 0,
+    "RSI": {
+      "interval": "1h",
+      "length": 14,
+      "SMA_length": 14,
+      "upperBand": 75,
+      "lowerBand": 25
+    }
+  },
+  "Indicators_Params": {
+    "account": "spot",
+    "stopLimit": 1,
+    "RSI": {
+      "interval": "5m",
+      "length": 14,
+      "SMA_length": 7,
+      "upperBand": 70,
+      "lowerBand": 30
+    },
+    "MACD": {
+      "interval": "4h",
+      "fast": 12,
+      "slow": 26,
+      "signal": 9
+    }
+  },
+  "strategy2": {
+    "RSI": {
+      "interval": "5m",
+      "length": 14,
+      "SMA_length": 7,
+      "upperBand": 70,
+      "lowerBand": 30
+    },
+    "MACD": {
+      "interval": "4h",
+      "fast": 12,
+      "slow": 26,
+      "signal": 9
+    }
+  },
+  "test_env": {
+    "fromDate": "2023-01-01",
+    "toDate": "2022-10-29",
+    "fileName": "",
+    "description": ""
+  }
+}
